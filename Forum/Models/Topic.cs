@@ -38,15 +38,5 @@
         
         public int CategoryId { get; set; }
         public Category Category { get; set; }
-
-        //public bool IsAuthor(string id)
-        //{
-        //    return this.Author.UserName.Equals(id);
-        //}
-
-        //public bool IsTopicAuthor(string id)
-        //{
-        //    return this.Author.UserName.Equals(id);
-        //}
     }
 }
