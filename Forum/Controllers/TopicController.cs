@@ -121,7 +121,7 @@
                 return RedirectToAction("Index", "Home");
             }
 
-            if (topic.Id != id)
+            if (topic.Author.UserName != User.Identity.Name)
             {
                 return Forbid();
             }
@@ -149,7 +149,7 @@
                     return RedirectToAction("Index", "Home");
                 }
 
-                if (topic.Id != topicFromDb.Id)
+                if (topicFromDb.Author.UserName != User.Identity.Name)
                 {
                     return Forbid();
                 }
@@ -189,7 +189,7 @@
                 return RedirectToAction("Index", "Home");
             }
 
-            if (topic.Id != id)
+            if (topic.Author.UserName != User.Identity.Name)
             {
                 return Forbid();
             }
@@ -212,7 +212,7 @@
                 return RedirectToAction("Index", "Home");
             }
 
-            if (topic.Id != topicDb.Id)
+            if (topic.Author.UserName != User.Identity.Name)
             {
                 return Forbid();
             }
